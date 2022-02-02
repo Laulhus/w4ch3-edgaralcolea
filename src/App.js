@@ -1,4 +1,5 @@
 import "./App.css";
+import Display from "./components/Display/Display";
 
 import Info from "./components/Info/Info";
 import Keyboard from "./components/Keyboard/Keyboard";
@@ -11,14 +12,14 @@ function App() {
       <main className="phone">
         <Keyboard />
         <div className="actions">
-          <span className="number">667359961</span>
+          <Display />
           El botón de llamar debe tener la clase "activo" cuando el número de
           teléfono tiene 9 cifras
-          <a href="a" className="call">
+          <a href="#" className="call">
             Call
           </a>
           Sólo se tiene que ver un botón u otro
-          <a href="a" className="hang active">
+          <a href="#" className="hang active">
             Hang
           </a>
         </div>

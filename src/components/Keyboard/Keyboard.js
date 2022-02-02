@@ -3,16 +3,14 @@ import PhoneContext from "../Context/PhoneContext";
 import Key from "../Key/Key";
 
 const Keyboard = () => {
-  const { keyNumbers } = useContext(PhoneContext);
+  const { keyNumbers, markNumber, setMarkedNumbers } = useContext(PhoneContext);
   return (
     <div className="keyboard-container">
       <ol className="keyboard">
         {keyNumbers.map((number) => (
-          <Key key={number} value={number}></Key>
+          <Key key={number} value={number} className={"key"}></Key>
         ))}
-        <li>
-          <button className="key big">delete</button>
-        </li>
+        <Key key={"delete"} className="key big" value={"delete"}></Key>
       </ol>
     </div>
   );
