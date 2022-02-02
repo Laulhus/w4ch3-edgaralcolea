@@ -1,7 +1,8 @@
-const Key = () => {
+const Key = ({ value }) => {
   return (
     <li>
-      <button className="key">1</button>
+      <button className="key">{value}</button>
     </li>
   );
 };
+export default Key;

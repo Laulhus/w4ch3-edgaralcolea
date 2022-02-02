@@ -4,6 +4,7 @@ import PhoneContext from "./PhoneContext";
 const PhoneContextProvider = ({ children }) => {
   const [isCalling, setIsCalling] = useState(false);
   const [markedNumbers, setMarkedNumbers] = useState([1, 2, 3]);
+  const keyNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
   const toggleIsCalling = () => {
     setIsCalling((isCalling) => !isCalling);
@@ -15,7 +16,13 @@ const PhoneContextProvider = ({ children }) => {
 
   return (
     <PhoneContext.Provider
-      value={{ isCalling, markedNumbers, toggleIsCalling, markNumber }}
+      value={{
+        isCalling,
+        markedNumbers,
+        toggleIsCalling,
+        markNumber,
+        keyNumbers,
+      }}
     >
       {children}
     </PhoneContext.Provider>
