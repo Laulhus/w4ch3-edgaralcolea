@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import ContextProvider from "./components/Context/ContextProvider";
+import PhoneContextProvider from "./components/Context/PhoneContextProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ContextProvider>
+    <PhoneContextProvider>
       <App />
-    </ContextProvider>
+    </PhoneContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

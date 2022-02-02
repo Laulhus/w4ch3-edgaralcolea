@@ -1,8 +1,10 @@
 import { useContext } from "react";
-import Provider from "../Context/ContextProvider";
+import PhoneContext from "../Context/PhoneContext";
 
 const Info = () => {
-  const { callStatus } = useContext(Provider);
-  return <span className={`message ${callStatus}`}>Calling...</span>;
+  const { isCalling } = useContext(PhoneContext);
+  return (
+    <span className={`message ${isCalling ? "" : "off"}`}>Calling...</span>
+  );
 };
 export default Info;
