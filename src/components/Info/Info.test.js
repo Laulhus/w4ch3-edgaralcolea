@@ -6,8 +6,7 @@ describe("Given an Info component", () => {
     test('It should render a span with the text"Calling..."', () => {
       const text = "Calling...";
 
-      render(<Info className={""} />);
-
+      render(<Info className={""} isCalling={false} />);
       const foundText = screen.queryByText(text);
 
       expect(foundText.textContent).toBe(text);
