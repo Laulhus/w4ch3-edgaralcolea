@@ -3,7 +3,7 @@ import PhoneContext from "./PhoneContext";
 
 const PhoneContextProvider = ({ children }) => {
   const [isCalling, setIsCalling] = useState(false);
-  const [markedNumbers, setMarkedNumbers] = useState([1]);
+  const [markedNumbers, setMarkedNumbers] = useState([]);
   const keyNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
   const toggleIsCalling = () => {
@@ -14,6 +14,9 @@ const PhoneContextProvider = ({ children }) => {
     setMarkedNumbers([...markedNumbers, number]);
   };
 
+  const deleteNumbers = () => {
+    setMarkedNumbers([]);
+  };
   return (
     <PhoneContext.Provider
       value={{
@@ -22,6 +25,7 @@ const PhoneContextProvider = ({ children }) => {
         toggleIsCalling,
         markNumber,
         keyNumbers,
+        deleteNumbers,
       }}
     >
       {children}
