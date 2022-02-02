@@ -11,7 +11,10 @@ const PhoneContextProvider = ({ children }) => {
   };
 
   const markNumber = (number) => {
-    setMarkedNumbers([...markedNumbers, number]);
+    if (markedNumbers.length <= 8) setMarkedNumbers([...markedNumbers, number]);
+    else {
+      return;
+    }
   };
 
   const deleteNumbers = () => {

@@ -4,7 +4,7 @@ import DeleteKey from "../DeleteKey/DeleteKey";
 import Key from "../Key/Key";
 
 const Keyboard = () => {
-  const { keyNumbers, deleteNumber } = useContext(PhoneContext);
+  const { keyNumbers } = useContext(PhoneContext);
   return (
     <div className="keyboard-container">
       <ol className="keyboard">
