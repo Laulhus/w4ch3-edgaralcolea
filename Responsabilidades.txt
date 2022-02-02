@@ -1,0 +1,52 @@
+Context
+
+Modificar el estado de la llamada al pulsar un Action.
+Añadir números a números marcados cuando se clican los Key.
+Pasar números marcados a Display.
+Eliminar números de números marcados cuando se clica Delete.
+Cambiar el estado de la llamada cuando se pulsa un Action.
+Pasar cambio de estado a Info y Actions
+Cambiar estado de llamada de Calling a Hanged tras 5s de inactividad
+Cambiar a Activo el Action cuando haya 9 números marcados.
+
+App
+
+Renderizar el componente Info pasándole estado de la llamada.
+Renderizar el componente Display pasándole los números marcados.
+Renderizar el componente Actions pasándole el estado de la llamada.
+Renderizar el componente Keyboard.
+
+Info
+
+Renderizar el mensaje "Calling"
+
+Display
+
+Renderizar los números marcados.
+
+
+Actions
+
+Renderizar elementos Action.
+
+  Action
+
+  Renderizar un botón.
+  Recoger clic del usuario.
+  Llamar acción que le pasen al hacer clic.
+
+Keyboard
+Renderizar elementos Key según estado de la llamada.
+
+
+Key
+Renderizar una tecla.
+Recoger clic del usuario.
+Llamar función que le pasen al hacer clic.
+
+Datos y acciones
+
+[Números marcados](Estado) -> Context -- Añadir y eliminar números al array.
+Estado de la llamada(Estado) --> Context -- Modificarlo
+[NúmerosTeclas] --> Keyboard 
+
