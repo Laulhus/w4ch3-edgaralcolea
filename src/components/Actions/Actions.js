@@ -4,15 +4,18 @@ import PhoneContext from "../Context/PhoneContext";
 import Display from "../Display/Display";
 
 const Actions = () => {
-  const { markedNumbers } = useContext(PhoneContext);
+  const { markedNumbers, isCalling } = useContext(PhoneContext);
   return (
     <div className="actions">
       <Display />
-      <Action
-        className={`call ${markedNumbers.length === 9 ? "active" : ""}`}
-        value={"Call"}
-      />
-      <Action className="hang active" value={"Hang"} />
+      {isCalling ? (
+        <Action className="hang active" value={"Hang"} />
+      ) : (
+        <Action
+          className={`call ${markedNumbers.length === 9 ? "active" : ""}`}
+          value={"Call"}
+        />
+      )}
     </div>
   );
 };
