@@ -10,7 +10,7 @@ const Action = ({ className, value }) => {
   };
 
   return (
-    <a href="#" className={className} onClick={pressButton}>
+    <a href="/#" className={className} onClick={pressButton}>
       {value}
     </a>
   );
