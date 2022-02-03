@@ -1,7 +1,7 @@
 import { useContext } from "react/cjs/react.development";
 import PhoneContext from "../Context/PhoneContext";
 
-const Key = ({ value, className, actionOnClick }) => {
+const Key = ({ value, className }) => {
   const { markNumber } = useContext(PhoneContext);
 
   const mark = (event) => {

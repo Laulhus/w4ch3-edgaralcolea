@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import PhoneContextProvider from "../Context/PhoneContextProvider";
 import Key from "./Key";
 
 describe("Given a Key component", () => {
@@ -6,7 +7,11 @@ describe("Given a Key component", () => {
     test("It should render a button with number 4", () => {
       const value = "4";
 
-      render(<Key value={value} />);
+      render(
+        <PhoneContextProvider>
+          <Key value={value} />
+        </PhoneContextProvider>
+      );
       const element = screen.queryByRole("button");
 
       expect(element.textContent).toBe(value);
