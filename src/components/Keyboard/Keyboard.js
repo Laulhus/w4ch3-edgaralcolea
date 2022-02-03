@@ -1,5 +1,6 @@
 import { useContext } from "react/cjs/react.development";
 import PhoneContext from "../Context/PhoneContext";
+import DeleteKey from "../DeleteKey/DeleteKey";
 import Key from "../Key/Key";
 
 const Keyboard = () => {
@@ -8,11 +9,13 @@ const Keyboard = () => {
     <div className="keyboard-container">
       <ol className="keyboard">
         {keyNumbers.map((number) => (
-          <Key key={number} value={number}></Key>
+          <Key key={number} value={number} className={"key"}></Key>
         ))}
-        <li>
-          <button className="key big">delete</button>
-        </li>
+        <DeleteKey
+          key={"delete"}
+          className="key big"
+          value={"delete"}
+        ></DeleteKey>
       </ol>
     </div>
   );

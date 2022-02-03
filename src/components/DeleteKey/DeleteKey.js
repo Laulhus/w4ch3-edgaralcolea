@@ -1,12 +1,12 @@
 import { useContext } from "react/cjs/react.development";
 import PhoneContext from "../Context/PhoneContext";
 
-const Key = ({ value, className, actionOnClick }) => {
-  const { markNumber } = useContext(PhoneContext);
+const DeleteKey = ({ value, className }) => {
+  const { deleteNumbers } = useContext(PhoneContext);
 
   const mark = (event) => {
     event.stopPropagation();
-    markNumber(value);
+    deleteNumbers();
   };
   return (
     <li>
@@ -16,4 +16,4 @@ const Key = ({ value, className, actionOnClick }) => {
     </li>
   );
 };
-export default Key;
+export default DeleteKey;
