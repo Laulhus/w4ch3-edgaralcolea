@@ -16,7 +16,7 @@ Renderizar el componente Display pasándole los números marcados.
 Renderizar el componente Actions pasándole el estado de la llamada.
 Renderizar el componente Keyboard.
 
-Info
+Info 
 
 Renderizar el mensaje "Calling"
 
